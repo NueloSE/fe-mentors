@@ -1,0 +1,118 @@
+:root {
+    /* primary color */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    /* neutral colors */
+    --dark-gray: hsl(234, 12%, 34%);
+    --light-grey: hsl(212, 6%, 44%);
+    --White: hsl(0, 0%, 100%);
+
+    --paragraph: "Poppins", sans-serif;
+    --size: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: var(--paragraph);
+}
+
+.container {
+    width: 80%;
+    margin: 5rem auto;
+}
+
+.about, .name, .intro {
+    text-align: center;
+
+}
+
+.about {
+    color: var(--light-grey);
+    font-size: 1.5rem;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.intro {
+    margin: auto;
+    max-width: 300px;
+    font-size: 15px;
+    color: var(--light-grey);
+    padding: 1rem 0 3rem 0;
+    line-height: 1.3rem;
+}
+p {
+    line-height: 1.3rem;
+    color: var(--light-grey);
+}
+
+article {
+    margin: 1.5rem auto;
+    padding: 1.2rem 2rem;
+    max-width: 300px;
+    border-radius: .4rem;
+    box-shadow: 0px 5px 20px var(--light-grey);
+    
+}
+
+img {
+   padding: 10% 0 0 70%;
+}
+
+.supervisor {
+    border-top: .3rem solid var(--Cyan);
+}
+.team {
+    border-top: .3rem solid var(--Red);
+}
+.karma {
+    border-top: .3rem solid var(--Orange);
+}
+.cal {
+    border-top: .3rem solid var(--Blue);
+}
+
+@media (min-width: 780px) {
+    section {
+        max-width: 1000px;
+        margin: auto;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+    article {
+        margin: 0 auto;
+    }
+    .supervisor {
+        grid-row: 2 / 4;
+    }
+    .team {
+        grid-column: 2/ 3;
+        grid-row: 1/span 2;
+    }
+    .karma {
+        grid-column: 2/3;
+        grid-row: 3 / span 2;
+    }
+    .cal {
+        grid-row: 2/4;
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+ }
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
