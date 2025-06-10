@@ -74,6 +74,10 @@ q, h3 {
 
 .daniel {
     background-color: var(--dark-purple);
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: right 50px top 0;
+
 }
 .jonathan {
     background-color: var(--grey500);
