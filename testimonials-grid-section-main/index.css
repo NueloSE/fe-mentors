@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+:root {
+/* Primary colors */
+--light-purple: hsl(260, 100%, 95%);
+--purple: hsl(264, 82%, 80%);
+--dark-purple: hsl(263, 55%, 52%);
+
+/* Neutral colors */
+
+--white: hsl(0, 0%, 100%);
+--grey100: hsl(214, 17%, 92%);
+--grey200: hsl(0, 0%, 81%);
+--grey400: hsl(224, 10%, 45%);
+--grey500: hsl(217, 19%, 35%);
+--dark-blue: hsl(219, 29%, 14%);
+--black: hsl(0, 0%, 7%);
+
+--fonts: "Barlow Semi Condensed", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonts);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+body {
+    background-color: var(--grey200);
+}
+.container {
+    margin: 5rem auto;
+    max-width: 360px;
+    overflow-x: hidden;
+}
+
+article {
+    box-shadow: 0 0 1px var(--grey100);
+    padding: 2rem 3rem 2rem 2rem;
+    margin: 0 0 2rem 0;
+    border-radius: 0.8rem;
+    color: var(--white);
+}
+
+figure {
+    display: flex;
+    gap: 1.4rem;
+    margin: 0 0 .8rem 0;
+}
+
+img {
+    border-radius: 100%;
+    width: auto;
+    height: 3rem;
+}
+.daniel img, .patrick img {
+    border: 2px solid var(--purple);
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+h3 {
+    margin-bottom: 1rem;
+}
+q, h3 {
+    line-height: 1.5rem;
+}
+
+.daniel {
+    background-color: var(--dark-purple);
+}
+.jonathan {
+    background-color: var(--grey500);
+}
+.jeanette, .kira {
+    background-color: var(--white);
+    color: var(--grey400);
+    h3 {
+        color: var(--grey500);
+    }
+}
+
+.patrick {
+    background-color: var(--dark-blue);
+}
+
+/* tablet */
+@media (min-width: 790px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 0 2rem;
+        max-width: 930px;
+    }
+    .patrick{
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+/* desktop */
+@media (min-width: 1440px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) ;
+        gap: 2rem;
+        max-width: 1500px;
+        padding: 2rem;
+    }
+    .span-2-col {
+        grid-column: span 2;
+    }
+    .kira {
+        grid-column: 4;
+        grid-row: 1/span 2;
+    }
+    .patrick {
+        grid-column: 2/4;
+        grid-row: 2;
+    }
+   
+    article {
+        margin-bottom: 0;
+    }
+    
+}
