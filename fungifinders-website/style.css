@@ -275,6 +275,9 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem 1rem;
+      a {
+        text-decoration: none;
+      }
     }
   }
 
@@ -284,11 +287,12 @@
     gap: 2rem;
     background-color: var(--background-extra-dark);
     padding-block: 2rem;
-    
+
     a {
       color: var(--text-main);
     }
-    a:hover, a:focus-visible{
+    a:hover,
+    a:focus-visible {
       color: var(--text-brand-light);
     }
   }
