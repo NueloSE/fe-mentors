@@ -242,6 +242,30 @@
 }
 
 @layer component {
+
+  .skip-to-main:not(:focus) {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;     
+  }
+
+  .skip-to-main {
+    position: absolute;
+    text-decoration: none;
+    background-color: var(--background-accent-main);
+    padding: .5rem;
+    border-radius: var(--border-radius-3);
+    top: 1.6rem;
+    left: 4rem;
+  }
+
+
   .hero {
     background-image: url("./assets/hero.webp");
     background-size: cover;
