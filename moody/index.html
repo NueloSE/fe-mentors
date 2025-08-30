@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Moody</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Calistoga&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <section id="logged-out-view">
+      <div class="container w-[320px]">
+        <h1 class="app-title">Moody</h1>
+
+        <div class="provider-buttons">
+          <button id="sign-in-with-google-btn" class="provider-btn">
+            <img src="assets/providers/google.png" class="google-btn-logo" />
+            Sign in with Google
+          </button>
+        </div>
+
+        <div class="auth-fields-and-buttons">
+          <input id="email-input" type="email" placeholder="Email" />
+          <input id="password-input" type="password" placeholder="Password" />
+
+          <button id="sign-in-btn" class="primary-btn">Sign in</button>
+          <button id="create-account-btn" class="secondary-btn">
+            Create Account
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="logged-in-view">
+      <div class="container">
+        <nav class="w-full flex justify-end my-4">
+          <img id="signout-btn" src="./assets/images/logoutBtn.gif" alt="" />
+        </nav>
+
+        <div class="app-container">
+          <div class="user-section">
+            <img alt="" id="user-image" />
+            <h2 id="greet-user"></h2>
+          </div>
+
+          <div class="mood-emojis">
+            <button id="mood-1" class="mood-emoji-btn">
+              <img src="./assets/emoji/bad.png" alt="" />
+              Bad
+            </button>
+            <button id="mood-2" class="mood-emoji-btn">
+              <img src="./assets/emoji/awful.png" alt="" />
+              Awful
+            </button>
+
+            <button id="mood-3" class="mood-emoji-btn">
+              <img src="./assets/emoji/neutral.png" alt="" />
+              Neutral
+            </button>
+            <button id="mood-4" class="mood-emoji-btn">
+              <img src="./assets/emoji/good.png" alt="" />
+
+              Good
+            </button>
+            <button id="mood-5" class="mood-emoji-btn">
+              <img src="./assets/emoji/amazing.png" alt="" />
+              Amazing
+            </button>
+          </div>
+
+          <div id="update-details">
+            <input id="updated-username" type="text" placeholder="Username" />
+            <input id="updated-image-url" type="text" placeholder="Image URL" />
+            <button class="primary-btn" id="update-btn">Update profile</button>
+          </div>
+          <div class="post-section">
+            <textarea
+              placeholder="Write down how you're feeling..."
+              id="post-input"
+            ></textarea>
+            <button id="post-btn" class="primary-btn">Post</button>
+            <!-- <button id="fetch-posts-btn" class="secondary-btn">Fetch posts</button> -->
+          </div>
+
+          <div class="filters-and-posts-section">
+            <div class="filters-section">
+
+                <button id="today-filter-btn" class="filter-btn">Today</button>
+                <button id="week-filter-btn" class="filter-btn">Week</button>
+                <button id="month-filter-btn" class="filter-btn">Month</button>
+                <button id="all-filter-btn" class="filter-btn">All</button>
+
+            </div>
+            <div class="posts-section" id="posts"></div>
+          </div>
+
+          
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
